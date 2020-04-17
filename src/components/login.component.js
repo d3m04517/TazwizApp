@@ -37,7 +37,7 @@ export default class Login extends Component {
         }
 
 
-        axios.post('http://localhost:8080/api/auth',user).then(res => { 
+        axios.post('/api/auth',user).then(res => { 
             this.props.history.push('/dashboard');
         }).catch((err => console.log("err")));
     }
