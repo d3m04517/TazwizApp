@@ -16,7 +16,7 @@ export default class Products extends Component {
     }
 
     componentDidMount() {
-        axios.get('/api/products').then(res => {
+        axios.get('http://localhost:8080/api/products').then(res => {
             if (res.data.length > 0) {
                 this.setState({
                     products: res.data.map(product => product)

@@ -16,7 +16,7 @@ export default class Customers extends Component {
     }
 
     componentDidMount() {
-        axios.get('/api/customers').then(res => {
+        axios.get('http://localhost:8080/api/customers').then(res => {
             if (res.data.length > 0) {
                 this.setState({
                     customers: res.data.map(customer => customer)

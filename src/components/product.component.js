@@ -55,7 +55,7 @@ export default class Products extends Component {
             createdDate: this.state.product.createdDate 
         }
 
-        axios.post('/api/products/update/' + product._id, product).then(res => {
+        axios.post('http://localhost:8080/api/products/update/' + product._id, product).then(res => {
             console.log(res.data);
         });
         this.props.history.push('/dashboard');
