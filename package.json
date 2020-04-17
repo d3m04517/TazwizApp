@@ -27,7 +27,11 @@
   "engines": {
     "node": "12.13.0"
   },
-  "proxy": "https://tazwizrapp.herokuapp.com/",
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:8080"
+    }
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
