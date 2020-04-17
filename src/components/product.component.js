@@ -55,10 +55,10 @@ export default class Products extends Component {
             createdDate: this.state.product.createdDate 
         }
 
-        axios.post('http://localhost:8080/products/update/' + product._id, product).then(res => {
+        axios.post('/api/products/update/' + product._id, product).then(res => {
             console.log(res.data);
         });
-        window.location = '/products';
+        this.props.history.push('/dashboard');
     }
 
     goBack() {

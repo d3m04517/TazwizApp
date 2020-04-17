@@ -68,10 +68,10 @@ export default class Customer extends Component {
             approved: this.state.customer.approved 
         }
 
-        axios.post('http://localhost:8080/customers/update/' + customer._id, customer).then(res => {
+        axios.post('/api/customers/update/' + customer._id, customer).then(res => {
             console.log(res.data);
         });
-        window.location = '/customers';
+        this.props.history.push('/dashboard');
     }
 
     goBack() {
